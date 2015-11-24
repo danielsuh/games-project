@@ -37,10 +37,12 @@
 | in the URL cannot be matched to a valid route.
 |
 */
-$route['default_controller'] = 'main';
-$route['404_override'] = '';
-$route['translate_uri_dashes'] = FALSE;
-$route['check'] = 'main/checkSession';
+$route['default_controller'] = 'admins';
+$route['admin'] = 'admins/index';
+$route['dashboard/orders']='admins/view_orders';
+$route['dashboard/products']='admins/view_products';
+$route['orders/show/(:any)']='admins/show_order/$1';
+
 
 
 /* End of file routes.php */
